@@ -16,6 +16,7 @@ import pro from "./resources/images/icon-pro.svg";
 import Card from "./components/Card";
 import PickAdd from "./components/PickAdd";
 import PickItem from "./components/PickAdd.Item";
+import Finish from "./components/Finish";
 
 
 export {
@@ -25,6 +26,7 @@ export {
   StepOne,
   Header,
   PickAdd,
+  Finish,
   SubHeading,
   InputField,
   Body,

@@ -845,6 +845,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(131 24 67 / var(--tw-bg-opacity));
 }
+.bg-primaryCustom-cardHover{
+  background-color: rgba(173, 190, 255,0.3);
+}
 .bg-primaryCustom-marineBlue{
   --tw-bg-opacity: 1;
   background-color: rgb(2 41 90 / var(--tw-bg-opacity));
@@ -1526,39 +1529,40 @@ input:hover{
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.other-services-finish{
+  display: flex;
+  justify-content: space-between;
+}
+.main-content-select-plan{
+  border-radius: 0.5rem;
+  background-color: rgba(173, 190, 255,0.3);
+}
 .checked\:accent-primaryCustom-purplish:checked{
   accent-color: #473dff;
 }
-
 .hover\:cursor-pointer:hover{
   cursor: pointer;
 }
-
 .hover\:border-2:hover{
   border-width: 2px;
 }
-
 .hover\:border-primaryCustom-purplish:hover{
   --tw-border-opacity: 1;
   border-color: rgb(71 61 255 / var(--tw-border-opacity));
 }
-
 .hover\:bg-primaryCustom-cardHover:hover{
   background-color: rgba(173, 190, 255,0.3);
 }
-
 .hover\:bg-primaryCustom-lightBlue:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(191 226 253 / var(--tw-bg-opacity));
 }
-
 @media (max-width: 786px){
 
   .max-\[786px\]\:h-full{
     height: 100%;
   }
 }
-
 @media (max-width: 766px){
 
   .max-\[766px\]\:col-span-12{
@@ -1581,7 +1585,6 @@ input:hover{
     background-image: url('/src/resources/images/bg-sidebar-mobile.svg');
   }
 }
-
 @media (min-width: 767px){
 
   .min-\[767px\]\:flex-col{

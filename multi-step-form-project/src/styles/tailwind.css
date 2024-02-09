@@ -186,3 +186,10 @@ input{
 .start-pick{
   @apply flex space-x-4
 }
+
+.other-services-finish{
+  @apply flex justify-between
+}
+.main-content-select-plan{
+  @apply bg-primaryCustom-cardHover rounded-lg flex flex-col;
+}

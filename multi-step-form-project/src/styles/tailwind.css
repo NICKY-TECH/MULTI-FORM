@@ -52,7 +52,7 @@ aside {
 }
 
 /* .form-container input {
-  @apply border border-solid border-neutralCustom-coolGray py-3 rounded-lg;
+  @apply border border-solid border-neutralCustom-coolGray py-5 pl-1 rounded-lg;
 } */
 
 form {
@@ -129,7 +129,7 @@ h2 {
 }
 
 input{
-  @apply checked:accent-primaryCustom-purplish w-[20px] h-[20px] hover:cursor-pointer  border border-solid border-neutralCustom-coolGray py-5 pl-1 rounded-lg
+  @apply checked:accent-primaryCustom-purplish w-[20px] h-[20px] hover:cursor-pointer border border-solid border-neutralCustom-coolGray py-5 pl-1 rounded-lg
 }
 
 .plan-details {

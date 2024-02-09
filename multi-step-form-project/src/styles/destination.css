@@ -1273,7 +1273,7 @@ aside{
 }
 
 /* .form-container input {
-  @apply border border-solid border-neutralCustom-coolGray py-3 rounded-lg;
+  @apply border border-solid border-neutralCustom-coolGray py-5 pl-1 rounded-lg;
 } */
 
 form > :not([hidden]) ~ :not([hidden]){
@@ -1488,14 +1488,6 @@ h2{
 input{
   height: 20px;
   width: 20px;
-  border-radius: 0.5rem;
-  border-width: 1px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(150 153 171 / var(--tw-border-opacity));
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 0.25rem;
 }
 
 input:checked{

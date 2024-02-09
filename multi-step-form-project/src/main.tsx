@@ -11,6 +11,9 @@ const store = configureStore({
   },
 });
 
+export type RootState= ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>

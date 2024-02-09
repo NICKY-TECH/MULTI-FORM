@@ -12,19 +12,85 @@
 
 body,
 html {
-  @apply w-full h-full;
+  @apply w-full h-full bg-neutralCustom-Magnolia font-ubuntu;
 }
 
 main {
-  @apply grid grid-cols-12 grid-rows-1 h-full;
+  @apply w-screen   flex justify-center items-center max-[786px]:h-full h-screen;
+}
+
+.main-content {
+  @apply w-[90%] grid grid-cols-12 grid-rows-1  h-[90%] rounded-lg space-x-6 min-[767px]:bg-white;
 }
 
 aside {
-  @apply sm:bg-sideBarDesktop col-span-5 row-span-1;
+  @apply max-[766px]:bg-sideBarMobile bg-sideBarDesktop bg-no-repeat mt-4 ml-4 bg-[100%] bg-cover  rounded-lg max-[766px]:col-span-12 col-span-4 row-span-1 h-[95%];
 }
 
 .body {
-  @apply col-span-7 row-span-1;
+  @apply max-[766px]:col-span-12 col-span-8 row-span-1 h-[95%];
 }
 
+.personal {
+  @apply flex justify-center mt-4  h-full max-[766px]:bg-white;
+}
 
+.personal-content {
+  @apply w-[90%] space-y-9 flex flex-col relative;
+}
+
+.form-container input {
+  @apply border border-solid border-neutralCustom-coolGray py-3 rounded-lg;
+}
+
+form{
+  @apply space-y-5
+}
+
+form label{
+  @apply text-primaryCustom-marineBlue font-medium;
+}
+
+::placeholder {
+  @apply ml-1;
+}
+
+.next-button {
+  @apply text-white bg-primaryCustom-marineBlue rounded-lg p-3 font-medium;
+}
+
+.button-container{
+  @apply  absolute bottom-0 flex w-full justify-end;
+  flex-grow: 1;
+}
+
+header h1{
+  @apply text-primaryCustom-marineBlue font-bold text-3xl
+}
+
+h2{
+  @apply font-medium text-neutralCustom-coolGray
+}
+
+.inner-list-container{
+  @apply flex space-x-6;
+}
+
+.list-container{
+  @apply mt-6 ml-5 min-[767px]:space-y-7 flex max-[766px]:flex-row  min-[767px]:flex-col max-[766px]:justify-center max-[766px]:space-x-5
+}
+
+.step-value{
+  @apply border-[1.4px] border-neutralCustom-Magnolia rounded-full border-solid w-[50px] h-[50px] flex justify-center items-center hover:cursor-pointer hover:bg-primaryCustom-lightBlue text-white font-medium hover:text-black
+}
+.step{
+  @apply text-neutralCustom-lightGray font-thin
+}
+
+.step-title{
+  @apply font-bold text-white
+}
+
+.step-title-container{
+  @apply max-[766px]:hidden
+}

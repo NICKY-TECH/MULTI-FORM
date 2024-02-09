@@ -1,9 +1,9 @@
 import "../styles/destination.css";
 
-function SiteButton(props: { text: string }) {
-  return <button>
+function Button(props: { text: string }) {
+  return <button  className="next-button">
     {props.text}
   </button>
 }
 
-export default SiteButton;
+export default Button;

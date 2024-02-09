@@ -3,15 +3,15 @@ export default {
   content:["./src/**/*.{js,jsx,css,ts,tsx}"],
   theme: {
     extend: {
-      color: {
-        primaryCustom: {
+      colors: {
+      "primaryCustom": {
           marineBlue: "#02295a",
           purplish: "#473dff",
           pastelBlue: "#adbeff",
           lightBlue: "#bfe2fd",
           strawBerry: "#ed3548",
         },
-        neturalCustom: {
+     "neutralCustom": {
           coolGray: "#9699ab",
           lightGray: "#d6d9e6",
           Magnolia: "#f0f6ff",
@@ -22,10 +22,8 @@ export default {
         ubuntu: ["Ubuntu"],
       },
       backgroundImage: {
-        sideBarDesktop:
-          "url('/multi-step-form-project/src/resources/images/bg-sidebar-desktop.svg')",
-        sideBarMobile:
-          "url('/multi-step-form-project/src/resources/images/bg-sidebar-mobile.svg')",
+      "sideBarDesktop":"url('/src/resources/images/bg-sidebar-desktop.svg')",
+      "sideBarMobile": "url('/src/resources/images/bg-sidebar-mobile.svg')",
       },
     },
   },

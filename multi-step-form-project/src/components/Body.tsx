@@ -1,12 +1,11 @@
 import "../styles/destination.css";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../hooks/typedRedux";
+import { Personal,SelectPlan } from "..";
 
 function Body (){
-const pageNumberValue = useSelector((state:{value:number})=> state.pageNumber.value);
+// const pageNumberValue = useAppSelector((state)=> state.pageNumber.value);
 return <section className="body">
-    {
-        pageNumberValue===1?"":""
-    }
+ <SelectPlan/>
 
 </section>
 }

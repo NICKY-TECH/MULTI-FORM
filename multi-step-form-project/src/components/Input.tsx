@@ -1,3 +1,4 @@
+import "../styles/destination.css"
 function Input(props:{label:string,placeholder:string}) {
   return (
     <div className="form-container w-full">

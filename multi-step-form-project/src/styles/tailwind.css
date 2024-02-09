@@ -51,9 +51,9 @@ aside {
  @apply space-y-9 flex flex-col;
 }
 
-.form-container input {
+/* .form-container input {
   @apply border border-solid border-neutralCustom-coolGray py-3 rounded-lg;
-}
+} */
 
 form {
   @apply space-y-5;
@@ -129,7 +129,7 @@ h2 {
 }
 
 input{
-  @apply checked:accent-primaryCustom-purplish w-[20px] h-[20px] hover:cursor-pointer
+  @apply checked:accent-primaryCustom-purplish w-[20px] h-[20px] hover:cursor-pointer  border border-solid border-neutralCustom-coolGray py-5 pl-1 rounded-lg
 }
 
 .plan-details {
@@ -191,5 +191,67 @@ input{
   @apply flex justify-between
 }
 .main-content-select-plan{
-  @apply bg-primaryCustom-cardHover rounded-lg flex flex-col;
+  @apply bg-primaryCustom-cardHover rounded-lg flex flex-col py-3 px-2 space-y-7;
+}
+
+.selected-service-type{
+  @apply flex justify-between ;
+
+}
+
+.selected-service-type-finish-page{
+  @apply font-semibold text-primaryCustom-marineBlue
+}
+
+
+.selected-amount{
+  @apply text-primaryCustom-marineBlue font-bold;
+}
+
+.edit-selected{
+  @apply underline text-neutralCustom-coolGray
+}
+
+.finalized-category,.first{
+  @apply text-neutralCustom-coolGray
+}
+
+.second{
+ @apply text-primaryCustom-marineBlue
+}
+
+hr{
+  @apply border-b-2 border-neutralCustom-lightGray border-solid
+}
+
+.finalized{
+  @apply flex justify-between
+}
+
+.parent-container-main-content{
+  @apply space-y-6
+}
+
+.finalized-price{
+  @apply text-primaryCustom-purplish font-semibold;
+}
+
+.finish-list{
+  @apply space-y-4
+}
+
+.thanks{
+  @apply flex justify-center items-center h-full
+}
+
+.content-thanks{
+  @apply flex flex-col space-y-2 items-center justify-center
+}
+
+.content-thanks h1, .content-thanks svg{
+  @apply text-center mx-auto
+}
+
+.content-thanks h2{
+  @apply w-[50%] text-center;
 }

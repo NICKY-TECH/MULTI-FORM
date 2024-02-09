@@ -15,7 +15,7 @@ function Personal() {
        </div>
         <form>
           <InputField
-            {...{ label: "Name", placeholder: "  e.g. Stephen King" }}
+            {...{ label: "Name", placeholder: "e.g. Stephen King" }}
           />
           <InputField
             {...{
@@ -24,7 +24,7 @@ function Personal() {
             }}
           />
           <InputField
-            {...{ label: "Phone Number", placeholder: "  e.g. +1 234 567 890" }}
+            {...{ label: "Phone Number", placeholder: "e.g. +1 234 567 890" }}
           />
         </form>
         <div className="button-container">

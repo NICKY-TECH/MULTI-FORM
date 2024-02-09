@@ -17,11 +17,15 @@ import Card from "./components/Card";
 import PickAdd from "./components/PickAdd";
 import PickItem from "./components/PickAdd.Item";
 import Finish from "./components/Finish";
+import FinishList from "./components/FinishList";
+import Thanks from "./components/Thanks";
 
 
 export {
   SideList,
+  FinishList,
   PickItem,
+  Thanks,
   Side,
   StepOne,
   Header,

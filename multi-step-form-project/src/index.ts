@@ -10,15 +10,28 @@ import SideBar from "./components/SideBar";
 import Main from "./pages/Main";
 import Button from "./components/Button";
 import SelectPlan from "./components/SelectPlan";
+import arcade from "./resources/images/icon-arcade.svg";
+import advanced from "./resources/images/icon-advanced.svg";
+import pro from "./resources/images/icon-pro.svg";
+import Card from "./components/Card";
+import PickAdd from "./components/PickAdd";
+import PickItem from "./components/PickAdd.Item";
+
 
 export {
   SideList,
+  PickItem,
   Side,
   StepOne,
   Header,
+  PickAdd,
   SubHeading,
   InputField,
   Body,
+  Card,
+  advanced,
+  arcade,
+  pro,
   Personal,
   SideBar,
   Main,

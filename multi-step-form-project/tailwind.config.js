@@ -10,7 +10,8 @@ export default {
           pastelBlue: "#adbeff",
           lightBlue: "#bfe2fd",
           strawBerry: "#ed3548",
-          cardHover:"rgba(173, 190, 255,0.3)"
+          cardHover:"rgba(173, 190, 255,0.3)",
+          switcher:"rgba(173, 190, 255,0.2)"
         },
      "neutralCustom": {
           coolGray: "#9699ab",

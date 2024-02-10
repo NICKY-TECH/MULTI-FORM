@@ -975,6 +975,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(2 41 90 / var(--tw-bg-opacity));
 }
+.bg-primaryCustom-switcher{
+  background-color: rgba(173, 190, 255,0.2);
+}
 .bg-purple-500{
   --tw-bg-opacity: 1;
   background-color: rgb(168 85 247 / var(--tw-bg-opacity));
@@ -1694,6 +1697,7 @@ input:hover{
   color: rgb(150 153 171 / var(--tw-text-opacity));
 }
 
+
 .switcher-button{
   height: 30px;
   width: 70px;
@@ -1724,6 +1728,12 @@ input:hover{
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.switcher{
+  background-color: rgba(173, 190, 255,0.2);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .switched-to{
   font-weight: 600;
   --tw-text-opacity: 1;
@@ -1731,6 +1741,7 @@ input:hover{
 }
 
 .go-back{
+  margin-left: 1rem;
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(214 217 230 / var(--tw-text-opacity));

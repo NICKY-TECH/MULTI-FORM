@@ -11,7 +11,6 @@ function SideList(
         const value:string | null = e.currentTarget.textContent;
         const usedValue:string = value!==null? value:"1";
         dispatch(pageState(parseInt(usedValue)))
-console.dir(value)
     }
 return <li className="inner-list-container">
         <span  className="step-value"

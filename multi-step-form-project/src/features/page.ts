@@ -4,7 +4,7 @@ type initialStateType ={
 }
 
 const initialValue:initialStateType={
-    value:0
+    value:1
 }
 
 export const pageSlice= createSlice({

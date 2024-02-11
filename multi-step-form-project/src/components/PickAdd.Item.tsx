@@ -1,5 +1,5 @@
 import "../styles/destination.css";
-import { Button } from "..";
+import { Button,Footer } from "..";
 
 function PickItem (props:{title:string,subtext:string,amount:string}){
     return <div className="pickitem-container">
@@ -16,8 +16,7 @@ function PickItem (props:{title:string,subtext:string,amount:string}){
         </div>
         </div>
         <div className="display-navigation">
-          <a href="#" className="go-back">Go Back</a>
-       <Button {...{ text:"Next Page"}}/>
+      <Footer/>
         </div>
 
     </div>

@@ -4,10 +4,12 @@ import App from "./App.tsx";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import pageNumber from "./features/page.ts";
+import planValue from "./features/plan.ts"
 
 const store = configureStore({
   reducer: {
-    pageNumber
+    pageNumber,
+    planValue
   },
 });
 

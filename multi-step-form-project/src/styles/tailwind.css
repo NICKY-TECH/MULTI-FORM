@@ -158,13 +158,13 @@ input {
 
 
 .switcher-button {
-  @apply bg-primaryCustom-marineBlue rounded-full w-[70px] h-[30px];
+  @apply bg-primaryCustom-marineBlue flex rounded-full w-[70px] h-[30px];
 }
 
 .switcher-icon {
   @apply bg-white rounded-full py-2;
   width: 30px;
-  height: 30px;
+  height: 100%;
 }
 
 .switcher {
@@ -172,7 +172,7 @@ input {
 }
 
 .switched-to {
-  @apply font-semibold text-primaryCustom-marineBlue;
+  @apply font-semibold;
 }
 
 .go-back {

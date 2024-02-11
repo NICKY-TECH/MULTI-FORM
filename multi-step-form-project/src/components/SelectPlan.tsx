@@ -1,15 +1,23 @@
 import "../styles/destination.css";
-import { Header, SubHeading, Card, arcade, advanced, pro, Button } from "..";
+import { Header, SubHeading, Card, arcade, advanced, pro, Footer } from "..";
+import { useAppSelector, useAppDispatch } from "../hooks/typedRedux";
+import { planState } from "../features/plan";
+import { useEffect, useState } from "react";
 
 function SelectPlan() {
+  const plan = useAppSelector((state) => state.planValue.value);
+  const [selectedPlan, setSelectedPlan] = useState("Monthly");
+  const dispatch = useAppDispatch();
   function switchButton(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    console.log(e);
-    if (e.clientX >= 799) {
-      console.log("Yearly");
-    } else {
-      console.log("Monthly");
-    }
+    dispatch(planState());
   }
+useEffect(()=>{
+  if(plan===false){
+    setSelectedPlan("Monthly")
+  }else if (plan===true){
+    setSelectedPlan("Yearly")
+  }
+},[plan])
   return (
     <section className="personal">
       <div className="select-plan-content">
@@ -23,17 +31,29 @@ function SelectPlan() {
         </div>
         <div className="card-container">
           <div className="cards">
-            <Card {...{ title: "Arcade", price: "$9/mo", icon: arcade }} />
+            <Card {...{ title: "Arcade", price:selectedPlan==="Monthly"?"$9/mo":"$90/yr", icon: arcade, promo:selectedPlan=="Monthly"?"":"2 months free" }} />
             <Card
-              {...{ title: "Advanced", price: " $12/mo", icon: advanced }}
+              {...{ title: "Advanced", price:selectedPlan==="Monthly"?"$12/mo":"$120/yr", icon: advanced, promo:selectedPlan=="Monthly"?"":"2 months free" }}
             />
-            <Card {...{ title: "Pro", price: "$15/mo", icon: pro }} />
+            <Card {...{ title: "Pro", price:selectedPlan==="Monthly"?"$15/mo":"$150/yr", icon: pro, promo:selectedPlan=="Monthly"?"":"2 months free" }}/>
           </div>
         </div>
         <div className="switcher">
-          <p className="switched-to">Monthly</p>
+          <p
+            className={
+              plan
+                ? "switched-to text-primaryCustom-marineBlue"
+                : "switched-to text-neutralCustom-coolGray"
+            }
+          >
+            Monthly
+          </p>
           <button
-            className="switcher-button"
+            className={
+              plan
+                ? "switcher-button justify-end"
+                : "switcher-button justify-start"
+            }
             onClick={(e) => {
               switchButton(e);
             }}
@@ -41,23 +61,29 @@ function SelectPlan() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
-              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="#ffffff"
               strokeWidth="0.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="feather feather-circle"
+              className="feather feather-circle h-full"
             >
               <circle cx="12" cy="12" r="10" fill="#ffffff"></circle>
             </svg>
           </button>
-          <p className="switched-to">Yearly</p>
+          <p
+            className={
+              plan
+                ? "switched-to text-neutralCustom-coolGray"
+                : "switched-to text-primaryCustom-marineBlue"
+            }
+          >
+            Yearly
+          </p>
         </div>
         <div className="display-navigation">
-          <a href="#" className="go-back">Go Back</a>
-       <Button {...{ text:"Next Page"}}/>
+          <Footer />
         </div>
       </div>
     </section>

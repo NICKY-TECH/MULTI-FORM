@@ -3,7 +3,6 @@ import { useAppSelector,useAppDispatch } from "../hooks/typedRedux";
 import { pageState } from "../features/page";
 import "../styles/destination.css"
 
-
 function SideList(
  props:{step:number,title:string}){
     const dispatch = useAppDispatch()

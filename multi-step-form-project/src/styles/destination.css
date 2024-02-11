@@ -818,6 +818,9 @@ video {
 .items-center{
   align-items: center;
 }
+.justify-start{
+  justify-content: flex-start;
+}
 .justify-end{
   justify-content: flex-end;
 }
@@ -1699,6 +1702,7 @@ input:hover{
 
 
 .switcher-button{
+  display: flex;
   height: 30px;
   width: 70px;
   border-radius: 9999px;
@@ -1713,7 +1717,7 @@ input:hover{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   width: 30px;
-  height: 30px;
+  height: 100%;
 }
 
 .switcher{
@@ -1736,8 +1740,6 @@ input:hover{
 
 .switched-to{
   font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(2 41 90 / var(--tw-text-opacity));
 }
 
 .go-back{

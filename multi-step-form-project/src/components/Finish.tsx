@@ -1,5 +1,5 @@
 import "../styles/destination.css";
-import { Header, SubHeading, Card, arcade, advanced, pro, Button,FinishList } from "..";
+import { Header, SubHeading, Card, arcade, advanced, pro, Button,FinishList,Footer } from "..";
 
 function Finish() {
   return (
@@ -41,8 +41,7 @@ function Finish() {
         </div>
       </div>
         <div className="display-navigation">
-          <a href="#" className="go-back">Go Back</a>
-       <Button {...{ text:"Next Page"}}/>
+       <Footer/>
         </div>
       </div>
       

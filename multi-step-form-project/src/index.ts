@@ -19,6 +19,7 @@ import PickItem from "./components/PickAdd.Item";
 import Finish from "./components/Finish";
 import FinishList from "./components/FinishList";
 import Thanks from "./components/Thanks";
+import Footer from "./components/NavigationFooter";
 
 
 export {
@@ -33,6 +34,7 @@ export {
   Finish,
   SubHeading,
   InputField,
+  Footer,
   Body,
   Card,
   advanced,

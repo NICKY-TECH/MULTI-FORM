@@ -1,7 +1,9 @@
 import "../styles/destination.css";
 import { Header, SubHeading, InputField, Button } from "../index";
 
+
 function Personal() {
+
   return (
     <section className="personal">
       <div className="personal-content">
@@ -15,16 +17,21 @@ function Personal() {
        </div>
         <form>
           <InputField
-            {...{ label: "Name", placeholder: "e.g. Stephen King" }}
+            {...{ label: "Name", placeholder: "e.g. Stephen King" ,
+            type:"text"
+          }}
           />
           <InputField
             {...{
               label: "Email Address",
               placeholder: "e.g. stephenking@lorem.com",
+              type:"email"
             }}
           />
           <InputField
-            {...{ label: "Phone Number", placeholder: "e.g. +1 234 567 890" }}
+            {...{ label: "Phone Number", placeholder: "e.g. +1 234 567 890",
+            type:"tel" 
+          }}
           />
         </form>
         <div className="button-container">

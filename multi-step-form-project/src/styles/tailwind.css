@@ -28,7 +28,7 @@ aside {
 }
 
 .body {
-  @apply max-[766px]:col-span-12 col-span-8 row-span-1 h-[95%] max-[766px]:flex max-[766px]:justify-center;
+  @apply max-[766px]:col-span-12 col-span-8 row-span-1 h-[95%] max-[766px]:flex max-[766px]:justify-center max-[766px]:w-screen;
 }
 
 .personal {
@@ -120,11 +120,11 @@ h2 {
 }
 
 .cards {
-  @apply flex space-x-4;
+  @apply flex min-[767px]:space-x-4 max-[766px]:flex-col max-[766px]:space-y-2;
 }
 
 .card {
-  @apply w-[50%] h-56 hover:cursor-pointer hover:border-primaryCustom-purplish hover:bg-primaryCustom-cardHover hover:border-2 border border-neutralCustom-coolGray border-solid rounded-lg;
+  @apply w-[50%] h-56 hover:cursor-pointer hover:border-primaryCustom-purplish hover:bg-primaryCustom-cardHover hover:border-2 border border-neutralCustom-coolGray border-solid rounded-lg max-[766px]:h-max max-[766px]:justify-center max-[766px]:items-center max-[766px]:w-[100%];
   /* color: rgba(173, 190, 255,0.3); */
 }
 
@@ -137,7 +137,7 @@ h2 {
 } */
 
 .inner-card {
-  @apply h-full w-full flex flex-col rounded-lg pl-2 py-3 justify-between;
+  @apply h-full w-full flex flex-col max-[766px]:flex-row rounded-lg pl-2 py-3 min-[767px]:justify-between max-[766px]:space-x-3;
 }
 
 input {
@@ -145,11 +145,11 @@ input {
 }
 
 .plan-details {
-  @apply content-end;
+  @apply min-[767px]:content-end;
 }
 
 .plan-title {
-  @apply text-primaryCustom-marineBlue font-bold text-lg;
+  @apply text-primaryCustom-marineBlue font-bold text-lg max-[766px]:text-base;
 }
 
 .plan-price {
@@ -255,3 +255,6 @@ hr {
   @apply space-y-4;
 }
 
+.plan-promo{
+  @apply text-primaryCustom-marineBlue font-medium;
+}

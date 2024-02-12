@@ -1,7 +1,9 @@
 import "../styles/destination.css";
-import { Header, SubHeading, Card, arcade, advanced, pro, Button,PickItem } from "..";
+import { Header, SubHeading, Card, arcade, advanced, pro, Button,PickItem,pickItemArray } from "..";
+import { useAppSelector} from "../hooks/typedRedux";
 
 function PickAdd(){
+  const selectedPlan=useAppSelector((state) => state.planOption.value);
     return <section className="personal">
     <div className="select-plan-content">
       <div className="headings-container">
@@ -13,9 +15,13 @@ function PickAdd(){
         />
       </div>
       <div className="pick-addons-container">
-<PickItem {...{title:"Online service", subtext:"Access to multiplayer games", amount:"+$1/mo"}}/>
-<PickItem {...{title:"Larger storage", subtext:"Extra 1TB of cloud save", amount:" +$2/mo"}}/>
-<PickItem {...{title:"Customizable Profile", subtext:"Custom theme on your profile", amount:"+$2/mo"}}/>
+{
+  pickItemArray.map((item,index)=>{
+    return <>
+    <PickItem {...{title:item.title, subtext:item.subtext, amount:selectedPlan==="Monthly"? item.amountMonthly: item.amountYearly}} key={index}/>
+    </>
+  })
+}
 
       </div>
       </div>

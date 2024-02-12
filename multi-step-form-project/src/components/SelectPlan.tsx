@@ -1,21 +1,22 @@
 import "../styles/destination.css";
-import { Header, SubHeading, Card, arcade, advanced, pro, Footer } from "..";
+import { Header, SubHeading, Card, arcade, advanced, pro, Footer,planArray } from "..";
 import { useAppSelector, useAppDispatch } from "../hooks/typedRedux";
+import { planOptionState } from "../features/planOption";
 import { planState } from "../features/plan";
 import { useEffect, useState } from "react";
 
 function SelectPlan() {
   const plan = useAppSelector((state) => state.planValue.value);
-  const [selectedPlan, setSelectedPlan] = useState("Monthly");
+  const selectedPlan=useAppSelector((state) => state.planOption.value);
   const dispatch = useAppDispatch();
   function switchButton(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     dispatch(planState());
   }
 useEffect(()=>{
   if(plan===false){
-    setSelectedPlan("Monthly")
+    dispatch(planOptionState("Monthly"));
   }else if (plan===true){
-    setSelectedPlan("Yearly")
+    dispatch(planOptionState("Yearly"));
   }
 },[plan])
   return (
@@ -31,11 +32,13 @@ useEffect(()=>{
         </div>
         <div className="card-container">
           <div className="cards">
-            <Card {...{ title: "Arcade", price:selectedPlan==="Monthly"?"$9/mo":"$90/yr", icon: arcade, promo:selectedPlan=="Monthly"?"":"2 months free" }} />
-            <Card
-              {...{ title: "Advanced", price:selectedPlan==="Monthly"?"$12/mo":"$120/yr", icon: advanced, promo:selectedPlan=="Monthly"?"":"2 months free" }}
-            />
-            <Card {...{ title: "Pro", price:selectedPlan==="Monthly"?"$15/mo":"$150/yr", icon: pro, promo:selectedPlan=="Monthly"?"":"2 months free" }}/>
+           {
+            planArray.map((item,index)=>{
+return <>
+   <Card {...{ title: item.title, price:selectedPlan==="Monthly"?item.priceMonthly:item.priceYearly, icon: arcade, promo:selectedPlan=="Monthly"?item.promoMonthly:item.promoYearly,img:item.img }} key={index}/>
+</>
+            })
+           }
           </div>
         </div>
         <div className="switcher">

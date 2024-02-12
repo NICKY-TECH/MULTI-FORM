@@ -1,7 +1,16 @@
 import "../styles/destination.css";
-import { Header, SubHeading, Card, arcade, advanced, pro, Button,FinishList,Footer } from "..";
+import { Header, SubHeading, Card, arcade, advanced, pro, Button,FinishList,Footer,planArray,pickItemArray } from "..";
+import { useAppSelector } from "../hooks/typedRedux";
 
 function Finish() {
+  const selectedValue =useAppSelector((state) => state. selectedPlan.value);
+  const selectedPlan=useAppSelector((state) => state.planOption.value);
+  const result: number|undefined= planArray.findIndex((items)=>{
+  return items.title === selectedValue
+  } 
+    );
+    console.log(result)
+// let priceValue = selectedPlan==="Monthly"?resul:"";
   return (
     <section className="personal">
       <div className="select-plan-content">
@@ -18,12 +27,12 @@ function Finish() {
             <div className="selected-service-type">
                 <div className="selected-first-detail">
                     <p className="selected-service-type-finish-page">
-                    Larger storage(Monthly)
+                   {selectedValue}({selectedPlan})
                     </p>
                     <a href="#" className="edit-selected">Change</a>
                 </div>
                 <p className="selected-amount">
-                +$2/mo
+         {selectedPlan==="Monthly"?planArray[result].priceMonthly:planArray[result].priceYearly}
                 </p>
 
             </div>
@@ -35,7 +44,7 @@ function Finish() {
 
         </div>
         <div className="finalized">
-            <p className="finalized-category">Total (per month)</p>
+            <p className="finalized-category">Total ({selectedPlan==="Monthly"?"per month":"per year"})</p>
             <p className="finalized-price"> +$1/mo</p>
              
         </div>

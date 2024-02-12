@@ -20,7 +20,7 @@ import Finish from "./components/Finish";
 import FinishList from "./components/FinishList";
 import Thanks from "./components/Thanks";
 import Footer from "./components/NavigationFooter";
-
+import { pickItemArray, planArray } from "./resources/data/data";
 
 export {
   SideList,
@@ -45,4 +45,6 @@ export {
   Main,
   Button,
   SelectPlan,
+  pickItemArray,
+  planArray,
 };

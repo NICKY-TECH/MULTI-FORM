@@ -1,5 +1,4 @@
-import { useDispatch } from "react-redux"
-import { useAppSelector,useAppDispatch } from "../hooks/typedRedux";
+import { useAppDispatch } from "../hooks/typedRedux";
 import { pageState } from "../features/page";
 import "../styles/destination.css"
 

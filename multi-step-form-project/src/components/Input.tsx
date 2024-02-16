@@ -1,5 +1,4 @@
 import "../styles/destination.css";
-import { useAppSelector, useAppDispatch } from "../hooks/typedRedux";
 function Input(props: {
   label: string;
   placeholder: string;

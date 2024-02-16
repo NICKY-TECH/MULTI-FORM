@@ -1,9 +1,9 @@
 import "../styles/destination.css";
-import { Header, SubHeading, Card, arcade, advanced, pro, Footer,planArray } from "..";
+import { Header, SubHeading, Card, arcade, Footer,planArray } from "..";
 import { useAppSelector, useAppDispatch } from "../hooks/typedRedux";
 import { planOptionState } from "../features/planOption";
 import { planState } from "../features/plan";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function SelectPlan() {
   const plan = useAppSelector((state) => state.planValue.value);

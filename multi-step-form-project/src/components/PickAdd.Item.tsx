@@ -1,14 +1,12 @@
 import "../styles/destination.css";
 import { Footer } from "..";
-import { useEffect, useRef } from "react";
-import { useAppSelector, useAppDispatch } from "../hooks/typedRedux";
+import { useRef } from "react";
+import { useAppDispatch } from "../hooks/typedRedux";
 import { addOnState} from "../features/addOn"
 
 let arr:{title:string|undefined,amount:string|undefined}[] = []
 function PickItem(props: { title: string; subtext: string; amount: string }) {
   const dispatch = useAppDispatch();
-  const pickForm = useAppSelector((state) => state.submitForm.value);
-  const pageNumberValue = useAppSelector((state)=> state.pageNumber.value);
   const amountRef = useRef<HTMLParagraphElement>(null);
   const titleRef = useRef<HTMLParagraphElement>(null);
 

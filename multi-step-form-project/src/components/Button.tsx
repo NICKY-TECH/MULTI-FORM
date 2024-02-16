@@ -1,15 +1,12 @@
 import "../styles/destination.css";
 import { useAppSelector,useAppDispatch } from "../hooks/typedRedux";
 import { pageState } from "../features/page";
-import { submitPickState } from "../features/isSubmitted";
-import { useEffect } from "react";
+
 
 
 function Button(props: { text: string }) {
   const dispatch = useAppDispatch()
   const pageNumberValue = useAppSelector((state)=> state.pageNumber.value);
-  const errorObj = useAppSelector((state)=> state.error.value);
-  const addValue = useAppSelector((state)=> state.addOn.value);
 function nextPage(){
   if(pageNumberValue>=2 && pageNumberValue<=4){
     // dispatch(submitPersonalFormState(true))
@@ -19,11 +16,6 @@ function nextPage(){
 
 }
 
-// function submitDetails(){
-// // dispatch(submitFormState(false))
-// if(pageNumberValue===1){
-// dispatch(submitFormState(true))
-// }
 
   return <button  className="next-button" onClick={()=>{
     nextPage();

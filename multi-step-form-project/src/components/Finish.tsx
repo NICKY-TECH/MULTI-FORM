@@ -2,37 +2,19 @@ import "../styles/destination.css";
 import {
   Header,
   SubHeading,
-  Card,
-  arcade,
-  advanced,
-  pro,
-  Button,
   FinishList,
   Footer,
   planArray,
-  pickItemArray,
 } from "..";
 import { useAppSelector } from "../hooks/typedRedux";
-import { useEffect, useState } from "react";
 
 function Finish() {
-  const [render, setRender] = useState<
-    {
-      title: string | undefined;
-      amount: string | undefined;
-    }[]
-  >([]);
   const selectedValue = useAppSelector((state) => state.selectedPlan.value);
-  const pageNumberValue = useAppSelector((state) => state.pageNumber.value);
   const addOnValue = useAppSelector((state) => state.addOn.value);
   const selectedPlan = useAppSelector((state) => state.planOption.value);
   const result: number | undefined = planArray.findIndex((items) => {
     return items.title === selectedValue;
   });
-  // let priceValue = selectedPlan==="Monthly"?resul:"";
-  useEffect(() => {
-   setRender([...addOnValue])
-  }, [pageNumberValue]);
   return (
     <section className="personal">
       <div className="select-plan-content">

@@ -12,9 +12,9 @@ import { pageState } from "../features/page";
 
 function Personal() {
   const dispatch = useAppDispatch()
-  const [nameError, setNameError] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [telError, setTelError] = useState("");
+  const [nameError, setNameError] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [telError, setTelError] = useState<string>("");
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const pageNumberValue = useAppSelector((state)=> state.pageNumber.value);
   function submitPersonalForm(e: React.FormEvent<HTMLFormElement>) {

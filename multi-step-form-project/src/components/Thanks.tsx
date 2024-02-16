@@ -1,13 +1,7 @@
 import "../styles/destination.css";
 import {
   Header,
-  SubHeading,
-  Card,
-  arcade,
-  advanced,
-  pro,
-  Button,
-  PickItem,
+  SubHeading
 } from "..";
 
 function Thanks() {

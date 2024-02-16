@@ -11,7 +11,7 @@ export const submitFormSlice= createSlice({
   name: "valid",
   initialState:initialValue,
   reducers: {
-    submitPickState: (state,action:PayloadAction<boolean>) => {
+    submitPersonalFormState: (state,action:PayloadAction<boolean>) => {
       return {
         ...state,
         value: action.payload,
@@ -21,4 +21,4 @@ export const submitFormSlice= createSlice({
 });
 
 export default submitFormSlice.reducer;
-export const {submitPickState } = submitFormSlice.actions;
+export const {submitPersonalFormState } = submitFormSlice.actions;

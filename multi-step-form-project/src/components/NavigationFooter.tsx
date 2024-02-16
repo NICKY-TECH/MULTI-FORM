@@ -10,8 +10,8 @@ function Footer (){
         e.preventDefault()
         if(pageNumberValue>1 && pageNumberValue<=4){
          const previousPage = pageNumberValue -1;
+         localStorage.removeItem("submit");
          dispatch(pageState(previousPage))
-
         }
     
     }

@@ -16,7 +16,7 @@ html {
 }
 
 main {
-  @apply w-screen  max-[766px]:min-w-max flex justify-center items-center max-[766px]:h-full h-screen;
+  @apply w-screen max-[313px]:min-w-max max-[766px]:min-w-fit flex justify-center items-center max-[766px]:h-full h-screen;
 }
 
 .main-content {
@@ -28,7 +28,7 @@ aside {
 }
 
 .body {
-  @apply max-[766px]:col-span-12 col-span-8 row-span-1 h-[95%] max-[766px]:flex max-[766px]:justify-center max-[766px]:w-screen;
+  @apply max-[766px]:col-span-12 col-span-8 row-span-1 h-[95%] max-[766px]:flex max-[766px]:justify-center;
 }
 
 .personal {
@@ -129,7 +129,7 @@ h2 {
 }
 
 .top-pick {
-  @apply w-[94%] h-[90px] hover:cursor-pointer hover:border-primaryCustom-purplish hover:bg-primaryCustom-cardHover hover:border-2 border border-neutralCustom-coolGray border-solid rounded-lg flex items-center px-3 justify-between;
+  @apply w-[94%] h-[95px] hover:cursor-pointer hover:border-primaryCustom-purplish hover:bg-primaryCustom-cardHover hover:border-2 border border-neutralCustom-coolGray border-solid rounded-lg flex items-center px-3 justify-between;
 }
 
 /* .pickitem-container{

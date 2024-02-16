@@ -686,11 +686,11 @@ video {
 .h-\[90\%\]{
   height: 90%;
 }
-.h-\[90px\]{
-  height: 90px;
-}
 .h-\[95\%\]{
   height: 95%;
+}
+.h-\[95px\]{
+  height: 95px;
 }
 .h-auto{
   height: auto;
@@ -775,6 +775,10 @@ video {
 .w-screen{
   width: 100vw;
 }
+.min-w-fit{
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
@@ -783,6 +787,9 @@ video {
   min-width: -moz-min-content;
   min-width: min-content;
 }
+.max-w-lg{
+  max-width: 32rem;
+}
 .max-w-max{
   max-width: -moz-max-content;
   max-width: max-content;
@@ -790,6 +797,9 @@ video {
 .max-w-min{
   max-width: -moz-min-content;
   max-width: min-content;
+}
+.max-w-sm{
+  max-width: 24rem;
 }
 .flex-shrink{
   flex-shrink: 1;
@@ -1252,6 +1262,14 @@ main{
 
   main{
     height: 100%;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+}
+
+@media (max-width: 313px){
+
+  main{
     min-width: -moz-max-content;
     min-width: max-content;
   }
@@ -1327,7 +1345,6 @@ aside{
   .body{
     grid-column: span 12 / span 12;
     display: flex;
-    width: 100vw;
     justify-content: center;
   }
 }
@@ -1672,7 +1689,7 @@ h2{
 
 .top-pick{
   display: flex;
-  height: 90px;
+  height: 95px;
   width: 94%;
   align-items: center;
   justify-content: space-between;
@@ -2073,9 +2090,9 @@ hr{
     width: 100%;
   }
 
-  .max-\[766px\]\:min-w-max{
-    min-width: -moz-max-content;
-    min-width: max-content;
+  .max-\[766px\]\:min-w-fit{
+    min-width: -moz-fit-content;
+    min-width: fit-content;
   }
 
   .max-\[766px\]\:flex-row{
@@ -2115,6 +2132,14 @@ hr{
 
   .max-\[766px\]\:pb-9{
     padding-bottom: 2.25rem;
+  }
+}
+
+@media (max-width: 313px){
+
+  .max-\[313px\]\:min-w-max{
+    min-width: -moz-max-content;
+    min-width: max-content;
   }
 }
 

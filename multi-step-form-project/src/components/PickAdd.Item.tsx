@@ -1,38 +1,76 @@
 import "../styles/destination.css";
-import { Button,Footer } from "..";
+import { Footer } from "..";
+import { useEffect, useRef } from "react";
+import { useAppSelector, useAppDispatch } from "../hooks/typedRedux";
+import { addOnState} from "../features/addOn"
 
+let arr:{title:string|undefined,amount:string|undefined}[] = []
+function PickItem(props: { title: string; subtext: string; amount: string }) {
+  const dispatch = useAppDispatch();
+  const pickForm = useAppSelector((state) => state.submitForm.value);
+  const pageNumberValue = useAppSelector((state)=> state.pageNumber.value);
+  const amountRef = useRef<HTMLParagraphElement>(null);
+  const titleRef = useRef<HTMLParagraphElement>(null);
 
-function PickItem (props:{title:string,subtext:string,amount:string}){
-const arr:string[] = [];
 console.log(arr)
-function checkedOption(e:React.MouseEvent<HTMLInputElement, MouseEvent>){
-const selectedBox ={
-    title:e.currentTarget.checked &&  e.currentTarget.parentElement?.parentElement?.children[0].children[1].textContent,
-}
-if(selectedBox.title)
-arr.push(selectedBox.title)
-}
+console.log("pickForm outside useeffect");
+console.log(pickForm)
 
-    return <div className="pickitem-container">
-        <div className="top-pick">
+  function checkedOption(e: React.ChangeEvent<HTMLInputElement>) {
+    if (e.target.checked) {
+      const selectedBox = {
+        title: titleRef.current?.innerHTML,
+        amount: amountRef.current?.innerHTML,
+      };
+      const foundIndex = arr.findIndex(
+        (item) => item.title === titleRef.current?.innerHTML
+      );
+      if(foundIndex===-1){
+        console.log(selectedBox)
+        arr=[...arr,selectedBox];
+        dispatch(addOnState(arr));
+        console.log("updating arr.currenr")
+        console.log(arr)
+      }
+   
+    } else if (e.target.checked === false) {
+      const found = arr.findIndex(
+        (item) => item.title === titleRef.current?.innerHTML
+      );
+      arr.splice(found, 1);
+      dispatch(addOnState(arr));
+      console.log("removing arr.currenr")
+      console.log(arr)
+    }
+  }
+  return (
+    <div className="pickitem-container">
+      <div className="top-pick">
         <div className="start-pick">
-        <input type="checkbox" onClick={(e)=>{
-            checkedOption(e)
-        }}/>
-        <div className="pick-details">
-            <p className="main-pick-title">{props.title}</p>
-             <p className="sub-pick-title">{props.subtext}</p>
-        </div>
+          <input
+            type="checkbox"
+            onChange={(e) => {
+              checkedOption(e);
+            }}
+          />
+          <div className="pick-details">
+            <p className="main-pick-title" ref={titleRef}>
+              {props.title}
+            </p>
+            <p className="sub-pick-title">{props.subtext}</p>
+          </div>
         </div>
         <div className="end-pick">
-<p className="amount">{props.amount}</p>
+          <p className="amount" ref={amountRef}>
+            {props.amount}
+          </p>
         </div>
-        </div>
-        <div className="display-navigation">
-      <Footer/>
-        </div>
-
+      </div>
+      <div className="display-navigation">
+        <Footer />
+      </div>
     </div>
+  );
 }
 
-export default PickItem
+export default PickItem;

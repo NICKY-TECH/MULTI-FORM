@@ -1,10 +1,10 @@
 import "../styles/destination.css";
 
-function FinishList() {
+function FinishList(props:{title:string|undefined,amount:string|undefined}) {
   return (
     <ul className="other-services-finish">
-      <li className="first">  Online service</li>
-      <li className="last"> +$1/mo</li>
+      <li className="first">{props.title}</li>
+      <li className="last"> {props.amount}</li>
     </ul>
   );
 }

@@ -1,9 +1,10 @@
 import "../styles/destination.css";
-import { Header, SubHeading, Card, arcade, advanced, pro, Button,PickItem,pickItemArray } from "..";
+import { Header, SubHeading,PickItem,pickItemArray } from "..";
 import { useAppSelector} from "../hooks/typedRedux";
 
 function PickAdd(){
   const selectedPlan=useAppSelector((state) => state.planOption.value);
+
     return <section className="personal">
     <div className="select-plan-content">
       <div className="headings-container">
@@ -22,7 +23,6 @@ function PickAdd(){
     </>
   })
 }
-
       </div>
       </div>
       </section>

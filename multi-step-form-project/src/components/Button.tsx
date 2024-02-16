@@ -11,7 +11,7 @@ function Button(props: { text: string }) {
   const errorObj = useAppSelector((state)=> state.error.value);
   const addValue = useAppSelector((state)=> state.addOn.value);
 function nextPage(){
-  if(pageNumberValue>=2 && pageNumberValue<4){
+  if(pageNumberValue>=2 && pageNumberValue<=4){
     // dispatch(submitPersonalFormState(true))
     const nexPageNumber = pageNumberValue +1;
     dispatch(pageState(nexPageNumber))

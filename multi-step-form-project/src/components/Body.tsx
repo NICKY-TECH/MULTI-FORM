@@ -7,7 +7,7 @@ const pageNumberValue = useAppSelector((state)=> state.pageNumber.value);
 return <section className="body">
     {
         pageNumberValue===1?<Personal/>:pageNumberValue===2?<SelectPlan/>
-        :pageNumberValue===3?<PickAdd/>:pageNumberValue===4?<Finish/>:""
+        :pageNumberValue===3?<PickAdd/>:pageNumberValue===4?<Finish/>:pageNumberValue===5?<Thanks/>:""
     }
 
 

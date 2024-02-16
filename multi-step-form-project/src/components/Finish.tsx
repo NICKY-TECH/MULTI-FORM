@@ -29,7 +29,6 @@ function Finish() {
   const result: number | undefined = planArray.findIndex((items) => {
     return items.title === selectedValue;
   });
-  console.log(addOnValue);
   // let priceValue = selectedPlan==="Monthly"?resul:"";
   useEffect(() => {
    setRender([...addOnValue])
@@ -65,11 +64,7 @@ function Finish() {
             <hr />
             <div className="finish-list">
               {addOnValue.map((item, index) => {
-                return (
-                  <>
-                    <FinishList {...{title:item.title, amount:item.amount}} key={index} />
-                  </>
-                );
+                return <FinishList {...{title:item.title, amount:item.amount}} key={index} />
               })}
             </div>
           </div>

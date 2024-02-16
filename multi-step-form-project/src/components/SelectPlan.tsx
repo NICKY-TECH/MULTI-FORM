@@ -33,10 +33,8 @@ useEffect(()=>{
         <div className="card-container">
           <div className="cards">
            {
-            planArray.map((item,index)=>{
-return <>
-   <Card {...{ title: item.title, price:selectedPlan==="Monthly"?item.priceMonthly:item.priceYearly, icon: arcade, promo:selectedPlan=="Monthly"?item.promoMonthly:item.promoYearly,img:item.img }} key={index}/>
-</>
+            planArray.map((item)=>{
+return <Card {...{ title: item.title, price:selectedPlan==="Monthly"?item.priceMonthly:item.priceYearly, icon: arcade, promo:selectedPlan=="Monthly"?item.promoMonthly:item.promoYearly,img:item.img }} key={item.id}/>
             })
            }
           </div>

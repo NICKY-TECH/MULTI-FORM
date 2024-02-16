@@ -258,3 +258,11 @@ hr {
 .plan-promo{
   @apply text-primaryCustom-marineBlue font-medium;
 }
+
+.label-and-error{
+  @apply flex justify-between
+}
+
+.label-and-error span{
+  @apply text-red-400 font-medium;
+}

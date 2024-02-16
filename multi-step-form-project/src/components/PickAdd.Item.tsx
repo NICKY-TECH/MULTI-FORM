@@ -12,9 +12,6 @@ function PickItem(props: { title: string; subtext: string; amount: string }) {
   const amountRef = useRef<HTMLParagraphElement>(null);
   const titleRef = useRef<HTMLParagraphElement>(null);
 
-console.log(arr)
-console.log("pickForm outside useeffect");
-console.log(pickForm)
 
   function checkedOption(e: React.ChangeEvent<HTMLInputElement>) {
     if (e.target.checked) {
@@ -26,11 +23,8 @@ console.log(pickForm)
         (item) => item.title === titleRef.current?.innerHTML
       );
       if(foundIndex===-1){
-        console.log(selectedBox)
         arr=[...arr,selectedBox];
         dispatch(addOnState(arr));
-        console.log("updating arr.currenr")
-        console.log(arr)
       }
    
     } else if (e.target.checked === false) {
@@ -39,8 +33,6 @@ console.log(pickForm)
       );
       arr.splice(found, 1);
       dispatch(addOnState(arr));
-      console.log("removing arr.currenr")
-      console.log(arr)
     }
   }
   return (

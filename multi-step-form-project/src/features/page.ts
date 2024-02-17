@@ -1,24 +1,24 @@
 import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 type initialStateType ={
-    value:boolean
+    value:number
 }
 
 const initialValue:initialStateType={
-    value:false
+    value:1
 }
 
-export const planSlice= createSlice({
+export const pageSlice= createSlice({
   name: "valid",
   initialState:initialValue,
   reducers: {
-   planState: (state) => {
+   pageState: (state,actions:PayloadAction<number>) => {
       return {
         ...state,
-        value: !state.value,
+        value: actions.payload,
       };
     },
   },
 });
 
-export default planSlice.reducer;
-export const {planState } = planSlice.actions;
+export default pageSlice.reducer;
+export const {pageState } = pageSlice.actions;

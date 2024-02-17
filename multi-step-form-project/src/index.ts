@@ -1,6 +1,5 @@
 import SideList from "./components/SideList";
 import Side from "./components/Side";
-import StepOne from "./components/Stepone";
 import Header from "./components/Header";
 import SubHeading from "./components/SubHeading";
 import InputField from "./components/Input";
@@ -28,7 +27,6 @@ export {
   PickItem,
   Thanks,
   Side,
-  StepOne,
   Header,
   PickAdd,
   Finish,

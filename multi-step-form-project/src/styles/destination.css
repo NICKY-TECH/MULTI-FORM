@@ -1026,6 +1026,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
 .bg-red-800{
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
@@ -1525,12 +1529,17 @@ form label{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.next-button:hover{
+  background-color: rgb(2, 41, 90,0.6);
+}
+
 @media (max-width: 766px){
 
   .next-button{
     margin-right: 1rem;
   }
 }
+
 
 .confirm-button{
   border-radius: 0.5rem;
@@ -1541,6 +1550,12 @@ form label{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+
+.confirm-button:hover{
+  background-color: rgba(71, 61, 255,0.6);
+}
+
 
 @media (max-width: 766px){
 

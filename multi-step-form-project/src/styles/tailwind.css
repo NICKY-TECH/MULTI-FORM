@@ -85,11 +85,12 @@ form label {
 }
 
 .next-button {
-  @apply text-white bg-primaryCustom-marineBlue rounded-lg p-3 font-medium max-[766px]:mr-4;
+  @apply text-white bg-primaryCustom-marineBlue rounded-lg p-3 font-medium max-[766px]:mr-4 hover:bg-primaryCustom-nextHover;
 }
 
+
 .confirm-button{
-  @apply bg-primaryCustom-purplish p-3 font-medium max-[766px]:mr-4 rounded-lg text-white; 
+  @apply bg-primaryCustom-purplish p-3 font-medium max-[766px]:mr-4 rounded-lg text-white hover:bg-primaryCustom-confirmHover;
 }
 
 header h1 {

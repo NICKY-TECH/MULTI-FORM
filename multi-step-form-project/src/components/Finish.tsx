@@ -7,6 +7,7 @@ import {
   planArray,
 } from "..";
 import { useAppSelector } from "../hooks/typedRedux";
+import { useRef } from "react";
 
 function Finish() {
   const selectedValue = useAppSelector((state) => state.selectedPlan.value);
@@ -15,6 +16,8 @@ function Finish() {
   const result: number | undefined = planArray.findIndex((items) => {
     return items.title === selectedValue;
   });
+ const breakDown = useRef<HTMLDivElement>(null)
+ console.log(breakDown.current)
   return (
     <section className="personal">
       <div className="select-plan-content">
@@ -44,7 +47,7 @@ function Finish() {
               </p>
             </div>
             <hr />
-            <div className="finish-list">
+            <div className="finish-list" ref={breakDown}>
               {addOnValue.map((item, index) => {
                 return <FinishList {...{title:item.title, amount:item.amount}} key={index} />
               })}

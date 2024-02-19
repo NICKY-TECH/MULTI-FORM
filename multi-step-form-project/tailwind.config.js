@@ -11,7 +11,9 @@ export default {
           lightBlue: "#bfe2fd",
           strawBerry: "#ed3548",
           cardHover:"rgba(173, 190, 255,0.3)",
-          switcher:"rgba(173, 190, 255,0.2)"
+          switcher:"rgba(173, 190, 255,0.2)",
+          confirmHover:"rgba(71, 61, 255,0.6)",
+          nextHover:"rgb(2, 41, 90,0.6)"
         },
      "neutralCustom": {
           coolGray: "#9699ab",

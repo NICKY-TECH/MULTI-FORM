@@ -9,7 +9,7 @@ function SelectPlan() {
   const plan = useAppSelector((state) => state.planValue.value);
   const selectedPlan=useAppSelector((state) => state.planOption.value);
   const dispatch = useAppDispatch();
-  function switchButton(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  function switchButton() {
     dispatch(planState());
   }
 useEffect(()=>{
@@ -55,9 +55,9 @@ return <Card {...{ title: item.title, price:selectedPlan==="Monthly"?item.priceM
                 ? "switcher-button justify-end"
                 : "switcher-button justify-start"
             }
-            onClick={(e) => {
-              switchButton(e);
-            }}
+            onClick={
+              switchButton
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -57,7 +57,7 @@ function PickItem(props: { title: string; subtext: string; amount: string }) {
         </div>
       </div>
       <div className="display-navigation">
-        <Footer />
+        <Footer  {...{text:"Next Page", name:"next-button"}}/>
       </div>
     </div>
   );

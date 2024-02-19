@@ -3,7 +3,7 @@ import { useAppSelector,useAppDispatch } from "../hooks/typedRedux";
 import { pageState } from "../features/page";
 import { Button } from ".."
 
-function Footer (){
+function Footer (props:{text:string,name:string}){
     const dispatch = useAppDispatch()
     const pageNumberValue = useAppSelector((state)=> state.pageNumber.value);
     function goBack (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>){
@@ -18,7 +18,7 @@ function Footer (){
     <a href="#" className="go-back" onClick={(e)=>{
         goBack(e)
     }}>Go Back</a>
-       <Button {...{ text:"Next Page"}}/>
+       <Button {...{ text:props.text, name:props.name}}/>
        </>
 }
 

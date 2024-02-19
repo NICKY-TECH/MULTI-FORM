@@ -58,7 +58,7 @@ function Finish() {
           </div>
         </div>
         <div className="display-navigation">
-          <Footer />
+          <Footer  {...{text:"Confirm", name:"confirm-button"}}/>
         </div>
       </div>
     </section>

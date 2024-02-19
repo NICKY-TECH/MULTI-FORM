@@ -4,7 +4,7 @@ import { pageState } from "../features/page";
 
 
 
-function Button(props: { text: string }) {
+function Button(props: { text: string,name:string }) {
   const dispatch = useAppDispatch()
   const pageNumberValue = useAppSelector((state)=> state.pageNumber.value);
 function nextPage(){
@@ -17,7 +17,7 @@ function nextPage(){
 }
 
 
-  return <button  className="next-button" onClick={()=>{
+  return <button  className={props.name} onClick={()=>{
     nextPage();
   }}>
     {props.text}

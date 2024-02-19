@@ -88,7 +88,7 @@ function Personal() {
             }}
           />
           <div className="button-container">
-            <Button text="Next Step" />
+          <Button  {...{text:"Next Page", name:"next-button"}}/>
           </div>
         </form>
       </div>

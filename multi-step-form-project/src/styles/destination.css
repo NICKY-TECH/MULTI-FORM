@@ -602,6 +602,9 @@ video {
 .ml-5{
   margin-left: 1.25rem;
 }
+.mr-4{
+  margin-right: 1rem;
+}
 .ms-auto{
   margin-inline-start: auto;
 }
@@ -1007,6 +1010,10 @@ video {
 .bg-primaryCustom-marineBlue{
   --tw-bg-opacity: 1;
   background-color: rgb(2 41 90 / var(--tw-bg-opacity));
+}
+.bg-primaryCustom-purplish{
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 61 255 / var(--tw-bg-opacity));
 }
 .bg-primaryCustom-switcher{
   background-color: rgba(173, 190, 255,0.2);
@@ -1521,6 +1528,23 @@ form label{
 @media (max-width: 766px){
 
   .next-button{
+    margin-right: 1rem;
+  }
+}
+
+.confirm-button{
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 61 255 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (max-width: 766px){
+
+  .confirm-button{
     margin-right: 1rem;
   }
 }
@@ -2062,6 +2086,10 @@ hr{
 
   .max-\[766px\]\:-mt-24{
     margin-top: -6rem;
+  }
+
+  .max-\[766px\]\:mr-4{
+    margin-right: 1rem;
   }
 
   .max-\[766px\]\:flex{

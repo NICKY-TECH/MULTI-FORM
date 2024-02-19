@@ -84,7 +84,7 @@ return <Card {...{ title: item.title, price:selectedPlan==="Monthly"?item.priceM
           </p>
         </div>
         <div className="display-navigation">
-          <Footer />
+        <Footer  {...{text:"Next Page", name:"next-button"}}/>
         </div>
       </div>
     </section>

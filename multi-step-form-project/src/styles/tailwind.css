@@ -88,6 +88,10 @@ form label {
   @apply text-white bg-primaryCustom-marineBlue rounded-lg p-3 font-medium max-[766px]:mr-4;
 }
 
+.confirm-button{
+  @apply bg-primaryCustom-purplish p-3 font-medium max-[766px]:mr-4 rounded-lg text-white; 
+}
+
 header h1 {
   @apply text-primaryCustom-marineBlue font-bold text-3xl;
 }

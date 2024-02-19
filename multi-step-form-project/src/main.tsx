@@ -8,6 +8,7 @@ import planOption from "./features/planOption.ts";
 import addOn from "./features/addOn.ts";
 import selectedPlan from "./features/selectedPlan.ts";
 import submitForm from "./features/isSubmitted.ts";
+import planValue from "./features/plan.ts"
 
 const store = configureStore({
   reducer: {
@@ -15,6 +16,7 @@ const store = configureStore({
     planOption,
     addOn,
     selectedPlan,
+    planValue,
     submitForm
   },
 });

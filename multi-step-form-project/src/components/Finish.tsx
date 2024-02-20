@@ -6,10 +6,12 @@ import {
   Footer,
   planArray,
 } from "..";
-import { useAppSelector } from "../hooks/typedRedux";
+import { useAppSelector,useAppDispatch } from "../hooks/typedRedux";
+import { pageState } from "../features/page";
 import { useRef } from "react";
 
 function Finish() {
+  const dispatch = useAppDispatch()
   const selectedValue = useAppSelector((state) => state.selectedPlan.value);
   const addOnValue = useAppSelector((state) => state.addOn.value);
   const selectedPlan = useAppSelector((state) => state.planOption.value);
@@ -18,6 +20,9 @@ function Finish() {
   });
  const breakDown = useRef<HTMLDivElement>(null)
  console.log(breakDown.current)
+ function changeOptions(){
+  dispatch(pageState(2))
+ }
   return (
     <section className="personal">
       <div className="select-plan-content">
@@ -36,7 +41,7 @@ function Finish() {
                 <p className="selected-service-type-finish-page">
                   {selectedValue}({selectedPlan})
                 </p>
-                <a href="#" className="edit-selected">
+                <a href="#" className="edit-selected" onClick={changeOptions}>
                   Change
                 </a>
               </div>

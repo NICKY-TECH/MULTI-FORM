@@ -1393,15 +1393,10 @@ aside{
 
 .thanks{
   display: flex;
-  height: 100%;
+  height: -moz-max-content;
+  height: max-content;
   align-items: center;
-}
-
-@media (max-width: 766px){
-
-  .thanks{
-    max-width: 28rem;
-  }
+  justify-content: center;
 }
 
 .content-thanks{

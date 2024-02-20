@@ -36,7 +36,7 @@ aside {
 }
 
 .thanks {
-  @apply flex items-center h-max justify-center;
+  @apply flex items-center h-full max-[766px]:max-w-md;
 }
 
 .content-thanks {

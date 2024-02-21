@@ -8,7 +8,7 @@ import {
 } from "..";
 import { useAppSelector,useAppDispatch } from "../hooks/typedRedux";
 import { pageState } from "../features/page";
-import { useRef, useState } from "react";
+import { useRef} from "react";
 
 function Finish() {
   const dispatch = useAppDispatch()

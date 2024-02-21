@@ -76,7 +76,7 @@ My process workflow is summarized below:
 
 ### What I learned
 
-During the implementation of this project I learnt about Typescript and how to use it within a react project. Typescript is cool and I plan on using it more often.
+During the implementation of this project I learnt about Typescript and how to use it within a react project. Typescript is helpful and I plan on using it more often.
 
 The code below shows the use of typescript:
 

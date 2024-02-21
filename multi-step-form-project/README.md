@@ -18,7 +18,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ## Overview
 
-This is a multistep form built with react to showcase my knowledge and   with the framework.
+This is a multistep form built with react to showcase my knowledge and skill.
 
 ### The challenge
 

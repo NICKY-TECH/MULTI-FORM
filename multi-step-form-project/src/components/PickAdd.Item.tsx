@@ -50,9 +50,7 @@ function PickItem(props: { title: string; subtext: string; amount: number }) {
   useEffect(()=>{
 arr=[]
 dispatch(addOnState(arr))
-    console.log("useeffect")
-    console.log(arr)
-        },[])
+        })
   return (
     <div className="pickitem-container">
       <div className="top-pick">

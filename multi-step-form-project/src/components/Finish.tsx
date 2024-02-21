@@ -18,13 +18,8 @@ function Finish() {
   const result: number | undefined = planArray.findIndex((items) => {
     return items.title === selectedValue;
   });
-  console.log(addOnValue)
-  const [total,setTotal] =useState<number|undefined>(selectedPlan === "Monthly"
-  ?planArray[result].priceMonthly
-  : planArray[result].priceYearly)
  function changeOptions(){
   dispatch(pageState(2))
-console.log(addOnValue)
  }
  const sum = useRef<number>(selectedPlan === "Monthly"
  ?planArray[result].priceMonthly

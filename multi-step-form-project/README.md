@@ -14,7 +14,6 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -35,8 +34,16 @@ Users should be able to:
   - A step is submitted, but no selection has been made
 
 ### Screenshot
+![validation_desktop](./src/resources/images/validation_desktop.png)
 
-![](./screenshot.jpg)
+![thanks_desktop](./src/resources/images/thanks_desktop.png)
+
+![finish_desktop](./src/resources/images/finish_desktop.png)
+
+![validation_mobile](./src/resources/images/validation_mobile.png)
+
+![finish_mobile](./src/resources/images/finish_mobile.png)
+
 
 ### Links
 

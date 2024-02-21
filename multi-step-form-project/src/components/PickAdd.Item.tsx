@@ -45,7 +45,6 @@ function PickItem(props: { title: string; subtext: string; amount: number }) {
       arr.splice(found, 1);
       dispatch(addOnState(arr));
     }
-
   }
   useEffect(()=>{
 arr=[]

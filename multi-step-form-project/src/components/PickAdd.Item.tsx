@@ -49,6 +49,7 @@ function PickItem(props: { title: string; subtext: string; amount: number }) {
   }
   useEffect(()=>{
 arr=[]
+dispatch(addOnState(arr))
     console.log("useeffect")
     console.log(arr)
         },[])

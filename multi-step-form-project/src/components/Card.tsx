@@ -1,13 +1,14 @@
 import "../styles/destination.css";
-import { useAppDispatch } from "../hooks/typedRedux";
+import { useAppDispatch, useAppSelector } from "../hooks/typedRedux";
 import { SelectedPlanState } from "../features/selectedPlan";
 
 function Card(props: {
   title: string;
-  price: string;
+  price: number;
   promo?: string;
   img: string;
 }) {
+  const selectedPlan = useAppSelector((state) => state.planOption.value);
   const dispatch = useAppDispatch();
   function clickCard(e:React.MouseEvent<HTMLDivElement, MouseEvent>) {
     dispatch(SelectedPlanState(
@@ -27,7 +28,7 @@ function Card(props: {
         </div>
         <div className="plan-details">
           <p className="plan-title">{props.title}</p>
-          <p className="plan-price">{props.price}</p>
+          <p className="plan-price">{selectedPlan==="Monthly"?`$${props.price}/mo`:`$${props.price}/yr`}</p>
           {props.promo ? <p className="plan-promo">{props.promo}</p> : ""}
         </div>
       </div>

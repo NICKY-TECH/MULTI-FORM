@@ -8,7 +8,7 @@ import {
 } from "..";
 import { useAppSelector,useAppDispatch } from "../hooks/typedRedux";
 import { pageState } from "../features/page";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function Finish() {
   const dispatch = useAppDispatch()
@@ -18,11 +18,30 @@ function Finish() {
   const result: number | undefined = planArray.findIndex((items) => {
     return items.title === selectedValue;
   });
- const breakDown = useRef<HTMLDivElement>(null)
- console.log(breakDown.current)
+  console.log(addOnValue)
+  const [total,setTotal] =useState<number|undefined>(selectedPlan === "Monthly"
+  ?planArray[result].priceMonthly
+  : planArray[result].priceYearly)
  function changeOptions(){
   dispatch(pageState(2))
+console.log(addOnValue)
  }
+ const sum = useRef<number>(selectedPlan === "Monthly"
+ ?planArray[result].priceMonthly
+ : planArray[result].priceYearly);
+  for (let i=0; i<addOnValue.length;i++){
+ if(addOnValue!=undefined&&addOnValue[i]!=undefined&&addOnValue[i].amount!=undefined){
+  const currentLoop:number | undefined = addOnValue[i].amount==undefined? 0 :addOnValue[i].amount
+ currentLoop!=undefined? sum.current = currentLoop + sum.current: sum.current = 0 + sum.current
+ }
+  }
+
+
+
+
+
+
+
   return (
     <section className="personal">
       <div className="select-plan-content">
@@ -47,14 +66,14 @@ function Finish() {
               </div>
               <p className="selected-amount">
                 {selectedPlan === "Monthly"
-                  ? planArray[result].priceMonthly
-                  : planArray[result].priceYearly}
+                  ? `$${planArray[result].priceMonthly}/mo`
+                  : `$${planArray[result].priceYearly}/yr`}
               </p>
             </div>
             <hr />
-            <div className="finish-list" ref={breakDown}>
+            <div className="finish-list">
               {addOnValue.map((item, index) => {
-                return <FinishList {...{title:item.title, amount:item.amount}} key={index} />
+                return <FinishList {...{title:item.title, amount:item.amount,type:selectedPlan}} key={index}  />
               })}
             </div>
           </div>
@@ -62,7 +81,7 @@ function Finish() {
             <p className="finalized-category">
               Total ({selectedPlan === "Monthly" ? "per month" : "per year"})
             </p>
-            <p className="finalized-price"> +$1/mo</p>
+            <p className="finalized-price">{selectedPlan==="Monthly"?`$${sum.current}/mo`:`$${sum.current}/yr`}</p>
           </div>
         </div>
         <div className="display-navigation">

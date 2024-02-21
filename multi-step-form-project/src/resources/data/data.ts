@@ -4,8 +4,8 @@ import {  advanced,
 export const planArray: {
   img:string,
   title: string;
-  priceMonthly: string;
-  priceYearly: string;
+  priceMonthly: number;
+  priceYearly: number;
   promoMonthly: string;
   promoYearly: string;
   id:number
@@ -13,8 +13,8 @@ export const planArray: {
   {
     img:arcade,
     title: "Arcade",
-    priceMonthly: "$9/mo",
-    priceYearly: "$90/yr",
+    priceMonthly: 9,
+    priceYearly: 90,
     promoMonthly: "",
     promoYearly: "2 months free",
     id:0
@@ -22,8 +22,8 @@ export const planArray: {
   {
     img:advanced,
     title: "Advanced",
-    priceMonthly: "$12/mo",
-    priceYearly: "$120/yr",
+    priceMonthly: 12,
+    priceYearly: 120,
     promoMonthly: "",
     promoYearly: "2 months free",
     id:1
@@ -31,8 +31,8 @@ export const planArray: {
   {
     img:pro,
     title: "Pro",
-    priceMonthly: "$15/mo",
-    priceYearly: "$150/yr",
+    priceMonthly: 15,
+    priceYearly: 150,
     promoMonthly: "",
     promoYearly: "2 months free",
     id:2
@@ -43,22 +43,22 @@ export const pickItemArray = [
   {
     title: "Online service",
     subtext: "Access to multiplayer games",
-    amountMonthly:"+$1/mo",
-    amountYearly: "+$10/yr",
+    amountMonthly:1,
+    amountYearly: 10,
     id:0
   },
   {
     title: "Larger storage",
     subtext: "Extra 1TB of cloud save",
-    amountMonthly:"+$2/mo",
-    amountYearly: "+$20/yr",
+    amountMonthly:2,
+    amountYearly: 20,
     id:1
   },
   {
     title: "Customizable Profile",
     subtext: "Custom theme on your profile",
-    amountMonthly:"+$2/mo",
-    amountYearly: "+$20/yr",
+    amountMonthly:2,
+    amountYearly: 20,
     id:2
   },
 ];

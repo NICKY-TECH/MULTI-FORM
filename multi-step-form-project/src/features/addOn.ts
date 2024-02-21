@@ -2,7 +2,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 type initialStateType = {
   value:{
     title: string | undefined;
-    amount: string | undefined;
+    amount: number | undefined;
+    type:string|undefined
   }[];
 };
 
@@ -16,7 +17,8 @@ export const addOnSlice = createSlice({
   reducers: {
     addOnState: (state, actions: PayloadAction<{
       title: string | undefined;
-      amount: string | undefined;
+      amount: number | undefined;
+      type:string|undefined
     }[]>) => {
       return {
         ...state,
